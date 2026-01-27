@@ -11,7 +11,7 @@ This hardware is released under the **CERN-OHL-W-2.0** (CERN Open Hardware Licen
 ## Naming Convention
 Our motor model names contain the technical specification of the unit. Here is how to decode them:
 
-**Example:** `CIANO421 125_40`
+**Example:** `CIANO_1_42 125_40`
 
 | Code | Position | Description | Options |
 |:---:|---|---|---|
@@ -20,8 +20,8 @@ Our motor model names contain the technical specification of the unit. Here is h
 | **A** | 3. Cooling | Cooling Method | **A**=Air, **L**=Liquid, **O**=Oil |
 | **N** | 4. Steel | Stator Material | **G**=Grain Oriented, **N**=Non-Oriented, **C**=FeCo Alloy |
 | **O** | 5. Housing | Construction | **O**=Open, **C**=Closed (IP65) |
-| **42** | 6. Poles | Pole Count | 12, 28, 42, etc. |
-| **1** | 7. Layers | Winding Layers | 1, 2 |
+| **1** | 6. Layers | Winding Layers | 1, 2 |
+| **42** | 7. Poles | Pole Count | 12, 28, 42, etc. |
 | **125**| 8. Diameter | Stator Diameter (mm)| |
 | **40** | 9. Length | Stator Length (mm) | |
 
@@ -32,33 +32,21 @@ Our motor model names contain the technical specification of the unit. Here is h
 ### Air Cooled Series
 Optimized for UAVs and aviation where airflow is available.
 
-| Model Name | Power (kW) | Torque (Nm) | RPM | Weight (kg) | KV Options |
+| Model Name | Power (kW) | RPM | Trust (kg) | Voltage (V) | Weight (kg) |
 |---|---|---|---|---|---|
-| **CIANO122 42_10** | 0.6 | 0.5 | 12,000 | 0.125 | 650, 325 |
-| **CIANO282 100_15**| - | - | - | - | - |
-| **CIANO421 125_25**| 5 | 16 | 3,000 | 2.2 | 36, 72 |
-| **CIANO421 125_40**| - | - | - | - | - |
-| **CIANO421 150_40**| 12 | 57 | 2,000 | 5 | 8, 16, 32 |
-| **CIAN282 200_70** | 20 | 95 | 2,000 | 10 | 10, 20 |
-| **CIANO421 250_60**| 60 | 286 | 2,000 | 22 | 8, 16 |
-| **CIAN421 250_70** | - | - | - | - | - |
-
-### Liquid Cooled Series
-Designed for heavy-duty robotics and enclosed systems.
-
-| Model Name | Power (kW) | Torque (Nm) | RPM | Weight (kg) | KV Options |
-|---|---|---|---|---|---|
-| **CILN282 200_50** | 50 | 120 | 4,000 | 11 | 4.2, 8.4 |
-| **CILN282 250_50** | 120 | 350 | 4,000 | 20 | 7, 14 |
-| **CILG 300_70** | 170 | 670 | 4,000 | 38 | 6, 12 |
+| **CIAG_2_28 125_25**| 3.7 | 4300 | 21 | 75 | 2 |
+| **CIAG_1_42 125_30**| 4.5 | 1900 | 36 | 75 | 2.2 |
+| **CIAG_2_28 150_40**| 10 | 2000 | 60 | 400 | 4.9 |
+| **CIAG 1_42 175_40**| 13 | 3100 | 60 | 700 | 5.5 |
+| **CIAG 2_28 200_30**| 13 | 1600 | 70 | 690 | 7 |
 
 ---
 
 ## Repository Structure
 
 * **/CAD** - 3D models (STEP format) for integration.
-* **/Drawings** - 2D PDF technical drawings with mounting dimensions.
-* **/Datasheets** - Detailed performance curves and thermal data.
+* **/doc** - PDF motors parameters.
+* **/test** - Detailed performance curves and thermal data.
 
 ---
 
